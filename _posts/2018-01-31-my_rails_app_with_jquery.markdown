@@ -95,6 +95,7 @@ $(".next-event").on('click', function(e) {
     let event = newEvent.displayEvent()
     $(".show").append(event)
     $(".next-event").attr("data-id", data["id"])
+    $(".prev-event").attr("data-id", data["id"])
     history.pushState({}, "", data["id"])
     $(".all-comments").attr("href", `/events/${data["id"]}/comments`)
 })
