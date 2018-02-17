@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Scope, Hoisting & this"
-date:       2018-02-17 06:15:34 +0000
+date:       2018-02-17 01:15:35 -0500
 permalink:  scope_hoisting_and_this
 ---
 
@@ -33,9 +33,10 @@ function myFunction() {
 } 
 ```
 
-##### Block Scope
 
-Variables declared with `const` and `let` are block scoped so they are only available inside the block. You cannot retrieve its value outside of the block. Variables declared with `var` are not block scoped. 
+### Block Scope
+
+Variables declared with `const` and `let` are block scoped so they are only available inside the block. You cannot retrieve its value outside of the block. Variables declared with `var` are not block scoped and are accessible outside of the block. 
 
 ```
 if (true) {
@@ -43,8 +44,8 @@ if (true) {
   let otherVar = 10;
 }
 
-myVar;  // Uncaught ReferenceError: myVar is not defined 
-otherVar;  // Uncaught ReferenceError: otherVar is not defined
+myVar;  // ReferenceError: myVar is not defined 
+otherVar;  // ReferenceError: otherVar is not defined
 
 if (true) {
   var foo = 5;
@@ -53,7 +54,8 @@ if (true) {
 foo;  // 5
 ```
 
-##### Lexical Scope
+
+### Lexical Scope
 
 Whenever you see a function within another function, the inner function has access to the scope in the outer function.
 
@@ -71,7 +73,9 @@ function a() {
 a();  // 10
 ```
 
+
 ### Hoisting
+
 
 ```
 b();
@@ -85,7 +89,7 @@ This would return 'Called b'.
 
 ```
 console.log(a);
-const a = 'Hello World'
+var a = 'Hello World'
 ```
 
 I assumed this would return “Hello World’ just like how it worked as the example above but it actually returns `undefined`.
@@ -93,6 +97,19 @@ I assumed this would return “Hello World’ just like how it worked as the exa
 The JavaScript engine goes through two phases: compilation phase and execution phase. In the compilation phase, it sets the memory space for the variables and functions. The function in its entirety is placed into memory space. However, for variables, the engine does not know what their values would be until it starts executing the code. It instead puts a placeholder called `undefined`. In the execution phase, it is where it executes your code line by line. This is when the variable is assigned to its value. 
 
 So, in the first line of this code, the identifier `a` is stored in memory as undefined during the compilation phase. The execution phase begins and steps through the code line by line. In the first line, `console.log(a);`, the value of `a` is still `undefined` and is what gets logged out to the console. In the second line, ‘Hello World’ is assigned to the variable `a`. From here on, all references to `a` in this scope will be ‘Hello World’.
+
+However, we get a different outcome when using `const` and `let` vs `var`. 
+
+```
+function superhero() {
+  console.log(marvel);  // ReferenceError: marvel is not defined
+  console.log(dc);  // ReferenceError: dc is not defined
+  let marvel = 'spiderman';
+  const dc = 'batman';
+}
+```
+
+Here, we get a `ReferenceError` as our output. `Var` is initialized with `undefined` but `const` and `let` remain uninitialized until their statements are run.
 
 ### this
 
