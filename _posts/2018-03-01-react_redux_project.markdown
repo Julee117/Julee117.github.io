@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "React Redux Project"
-date:       2018-03-02 03:31:01 +0000
+date:       2018-03-01 22:31:02 -0500
 permalink:  react_redux_project
 ---
 
@@ -55,7 +55,7 @@ The new state is available to any component subscribed to the store via `connect
 
 Components can be divided into two categories: Presentational and Container. Presentational components are concerned with how things look. Container components are concerned with how things work and are often stateful. They provide data and behavior to presentational components and to other container components. It will be alerted when a change occurs to the state by the reducer. Then, it would re-render with the changes. 
 
-I’m happy that I was able to get over the hump and have a working app. There is more that I can do with this app like adding user authentication and when a user creates a post or a comment, it would show who created it. I want to build more apps to become more familiar with using React Redux. 
+I’m happy that I was able to get over the hump and have a working app. You can play around with the app [here](https://image-post.surge.sh/) and view the [code](https://github.com/Julee117/image-post-client).  There is more that I can do with this app like adding user authentication and when a user creates a post or a comment, it would show who created it. I want to build more apps to become more familiar with using React Redux. 
 
 It’s been a long journey getting to where I am now and as I’m writing this blog, I realize I’m nearing the conclusion of this curriculum. It’s bittersweet in the sense that I’m proud of what I’ve accomplished, I enjoyed the course but yet I know that I myself have to pursue even more to become adept in coding. 
 
