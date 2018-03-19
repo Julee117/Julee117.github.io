@@ -1,12 +1,12 @@
 ---
 layout: post
 title:      "My Rails App with jQuery"
-date:       2018-02-01 03:04:39 +0000
+date:       2018-01-31 22:04:39 -0500
 permalink:  my_rails_app_with_jquery
 ---
 
 
-In this project, I had to expand my rails app by adding dynamic features through jQuery and JSON API. As a recap, I created a rails app where each user has a calendar. The user can create event notifications, notify others and place the notification on their calendars. 
+In this project, I had to expand my rails app by adding dynamic features through jQuery and JSON API. As a recap, I created a rails app where each user has a calendar. The user can create event notifications, notify others and place the notification on their calendars. You can view the code for this project [here](https://github.com/Julee117/e-reminder) and visit my [deployed app](https://ereminder.herokuapp.com/).
 
 First, I  installed `gem ‘active_model_serializers’`. ActiveModel::Serializer helps us create custom JSON. 
 
@@ -95,7 +95,7 @@ $(".next-event").on('click', function(e) {
     let event = newEvent.displayEvent()
     $(".show").append(event)
     $(".next-event").attr("data-id", data["id"])
-    $(".prev-event").attr("data-id", data["id"])
+		$(".prev-event").attr("data-id", data["id"])
     history.pushState({}, "", data["id"])
     $(".all-comments").attr("href", `/events/${data["id"]}/comments`)
 })
