@@ -6,7 +6,11 @@ permalink:  my_rails_app_with_jquery
 ---
 
 
-In this project, I had to expand my rails app by adding dynamic features through jQuery and JSON API. As a recap, I created a rails app where each user has a calendar. The user can create event notifications, notify others and place the notification on their calendars. You can view the code for this project [here](https://github.com/Julee117/e-reminder) and visit my [deployed app](https://ereminder.herokuapp.com/).
+In this project, I had to expand my rails app by adding dynamic features through jQuery and JSON API. As a recap, I created a rails app where each user has a calendar. The user can create event notifications, notify others and place the notification on their calendars. You can view the code for this project [here](https://github.com/Julee117/e-reminder) and visit my [deployed app](https://ereminder.herokuapp.com/). 
+
+Here is the video of the walkthrough: 
+
+[![Rails jQuery walkthrough](http://res.cloudinary.com/du8aeeumk/image/upload/v1521916318/jquery-pic3.jpg)](https://www.youtube.com/watch?v=HsYOYPYHrDk)
 
 First, I  installed `gem ‘active_model_serializers’`. ActiveModel::Serializer helps us create custom JSON. 
 
