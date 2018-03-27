@@ -24,7 +24,13 @@ Looking at this helped when I was working on my controllers.
 
 While working on this project and getting errors, I am going to be more mindful to remember to put `use Rack::MethodOverride` above all my controllers in config.ru so that the Sinatra Middleware can let the app send patch and delete requests. I also need to keep in mind to place for example: `get ‘/items/new’` before `get '/items/:id` so that Sinatra does not feed all requests for `/items/new` to `/items/:id`.
 
-I was very happy to see everything working. You can check out my [code](https://github.com/Julee117/own_collection) and play around with it [here](https://own-collection.herokuapp.com/).  I also enjoyed getting exposure in developing the front end of the project. I am looking forward to learning and building my knowledge base so that I can develop more sophisticated apps. 
+I was very happy to see everything working. You can check out my [code](https://github.com/Julee117/own_collection) and play around with it [here](https://own-collection.herokuapp.com/).  
+
+Below is a walkthrough of my app:
+
+[![sinatra app](http://res.cloudinary.com/du8aeeumk/image/upload/v1522120531/sinatra2.jpg)](https://youtu.be/PRkUL9BDABc)
+
+I also enjoyed getting exposure in developing the front end of the project. I am looking forward to learning and building my knowledge base so that I can develop more sophisticated apps. 
 
 
 
