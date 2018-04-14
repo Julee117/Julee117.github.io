@@ -131,12 +131,12 @@ If `this` is referenced inside a method, it equals the object that received the 
 let person = {
   first: 'Ada',
   last: 'Lovelace',
-  greet: 'function() { 
+  greet: function() { 
 	  console.log(this)
   }
 }
 
-person.full();  // Object {first: 'Ada', last: 'Lovelace', greet: function}
+person.greet();  // Object {first: 'Ada', last: 'Lovelace', greet: function}
 ```
 
 When we call constructor functions with the `new` keyword, `this` is bound to the new object being created. 
