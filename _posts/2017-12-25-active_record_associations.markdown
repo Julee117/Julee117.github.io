@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Active Record Associations"
-date:       2017-12-25 18:39:10 +0000
+date:       2017-12-25 13:39:11 -0500
 permalink:  active_record_associations
 ---
 
@@ -15,9 +15,9 @@ For example, a comment belongs to an article. In the comments table, there will 
 
 Some of the methods added to our model are:
 -	`comment.article`
-   - This gives us the article that the comment is associated with.
+    - This gives us the article that the comment is associated with.
 -	`comment.article=(article)`  
-   - Instead of writing `comment.article_id = article.id`.
+    - Instead of writing `comment.article_id = article.id`.
 -	`comment.build_article`
     - This is similar to `comment.article = Article.new`.
 -	`comment.create_article`
